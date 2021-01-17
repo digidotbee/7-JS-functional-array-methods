@@ -38,10 +38,10 @@ After completing this assignment, you be able to effectively use
 
 1. Use the files `items.js` and `index.html`
 2. Make sure to create a `main.js` file to put your code in
-3. Using the `items` variable, use `array.map()`, `array.reduce()`, `array.forEach`, and `array.filter()` to help you through the following questions.
+3. Using the `items` variable, use `array.map()`, `array.reduce()`, `array.forEach`, and `array.filter()` to help you through the questions in the html file.
 4. Using `innerHTML`, place your answers in the correct element in the `index.html` file.
 5. Make your `index.html` page look exactly like provided `mockup.png`
-6. Deploy this to GH Pages
+6. Deploy this to github Pages
 
 > Make sure the output matches the answers below for each question. Make sure to comment your code as you walk through your process.
 
