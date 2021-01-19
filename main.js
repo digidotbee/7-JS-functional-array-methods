@@ -117,8 +117,24 @@ const matTotals = items.filter (function (x) {
 })
 
 const listMaterial = matTotals.map(function (item) {
-    return `<li>${item.materials} ${item.materials.length} </li>`
-}).join("")
+   const mergeMatsNewList = item.materials.map(function (x){
+    return `${x}`
+   })
+    return mergeMatsNewList.join("<br>")
+})
+
+console.log(listMaterial)
+
+ 
+
+//try to format at every array index spot to list that number.
+// const forEachArrItem = 
+
+// arraySpot = 
+
+// matTotals.forEach (function (e) {
+//     arraySpot = 
+// })
 
 document.querySelector(`#answer5`).innerHTML = (listMaterial)
 
@@ -132,6 +148,6 @@ items.filter (function(made){
 
 let numOfMadeItems = madeItems.length
 
-let htmlStuff = `${numOfMadeItems} were made by their sellers`
+let htmlStuff = `${numOfMadeItems} items were made by their sellers`
 
 document.querySelector(`#answer6`).innerHTML = (htmlStuff)
