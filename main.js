@@ -31,20 +31,20 @@ document.querySelector(`#answer1`).innerHTML = `The average price is $${priceAvg
 //  a:  1.  filter through prices to return less than or equal to $18 
 //          AND more than or equal to $14
 //      2.  Assign them to a variable
-//      2.5 move through the newArray and list the titles of the newArray as a 
+//      2.5 move through the awesomeArray and list the titles of the awesomeArray as a 
 //           list. (arr.map)
 //      3.  Display that list in the html document.
 
-let newArray = 
+let awesomeArray = 
 items.filter (function (item) {
     return (item.price >= 14.00 && item.price <= 18.00)
 })
 
-// console.log(newArray)
+// console.log(awesomeArray)
 
 const priceTitles =
 
-newArray.map (function (title){
+awesomeArray.map (function (title){
     return `<li>${title.title}</li> <br>` 
 })
 
@@ -123,7 +123,15 @@ const listMaterial = matTotals.map(function (item) {
     return mergeMatsNewList.join("<br>")
 })
 
-console.log(listMaterial)
+let newArray = matTotals.map (function (x){
+    let materialsHTML = x.materials.map(function (material) {
+        return `<li>${material}</li>`
+    });
+    return `<div>Name: ${x.title}</div><div>Materials: ${materialsHTML}</div><div>Number of Materials:
+     ${x.materials.length}</div>`
+}).join("")
+
+console.log(newArray)
 
  
 
@@ -136,7 +144,7 @@ console.log(listMaterial)
 //     arraySpot = 
 // })
 
-document.querySelector(`#answer5`).innerHTML = (listMaterial)
+document.querySelector(`#answer5`).innerHTML = (newArray)
 
 
 //   Question 6 How many items were made by their sellers? "i_did"
